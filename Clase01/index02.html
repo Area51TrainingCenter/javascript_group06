@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="css/estilos01.css">
+</head>
+<body>
+
+<h1>Programación Javascript</h1>
+
+
+<script>
+	function Perro() {
+		obj = this;
+
+		obj.nombre = "Dandy";
+		obj.raza = "Siberian Husky";
+		obj.entrenado = true;
+
+		obj.saltar = function(){
+			alert("Estoy saltando");
+		}
+
+		obj.ladrar = function(){
+			alert("Estoy ladrando");
+		}
+
+		obj.comer = function(){
+			alert("Estoy comiendo");
+		}
+	}
+
+	var miPerro = new Perro();
+
+	miPerro.saltar();
+	miPerro.comer();
+	miPerro.ladrar();
+
+	
+
+
+
+</script>
+
+
+
+</body>
+</html>

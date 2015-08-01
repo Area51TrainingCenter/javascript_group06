@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="css/estilos01.css">
+</head>
+<body>
+
+<h1>Programación Javascript</h1>
+
+
+<script>
+	function Perro() {
+		obj = this;
+
+		obj.nombre = "Dandy";
+		obj.raza = "Siberian Husky";
+		obj.entrenado = true;
+	}
+
+	var miPerro = new Perro();
+
+	/*
+		+, -, /, *, %, ?
+	*/
+
+	var perroEntrenado = miPerro.entrenado==true ? "Sí" :"No";
+
+	alert(1===true);
+
+	alert(miPerro.nombre);
+	alert(miPerro.entrenado);
+	alert("Mi perro se llama "+miPerro.nombre + " ¿entrenado? "+ perroEntrenado);
+
+
+</script>
+
+
+
+</body>
+</html>

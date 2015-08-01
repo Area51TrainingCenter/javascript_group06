@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="css/estilos01.css">
+</head>
+<body>
+
+<h1>Programación Javascript</h1>
+
+
+<script>
+	function Perro(lnombre, lraza, lentrenado, lsexo) {
+		obj = this;
+
+		obj.nombre = lnombre;
+		obj.raza = lraza;
+		obj.entrenado = lentrenado;
+		obj.sexo = lsexo;
+
+		obj.saltar = function(){
+			alert("Estoy saltando");
+		}
+
+		obj.ladrar = function(){
+			alert("Estoy ladrando");
+		}
+
+		obj.comer = function(){
+			alert("Estoy comiendo");
+		}
+	}
+
+	var miPerro01 = new Perro("Dandy", "Siberiano", true, true);
+	var miPerro02 = new Perro("Tati", "Shitzu", false, false);
+
+	/*console.log(miPerro01.nombre);
+	console.log(miPerro02.nombre);
+	console.log(miPerro02.raza);
+	*/
+
+	console.log(miPerro01);
+
+	console.log(miPerro01.nombre, miPerro02.nombre, miPerro02.raza);
+
+</script>
+
+
+
+</body>
+</html>

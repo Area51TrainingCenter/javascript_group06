@@ -1,1 +1,2 @@
-# javascript_group06
+# Javascript + AngularJS
+Instructor: Sergio Hidalgo

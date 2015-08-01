@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="css/estilos01.css">
+</head>
+<body>
+
+<h1>Programación Javascript</h1>
+<h2 id="razaPerro"></h2>
+
+
+<script>
+	function Perro(lnombre, lraza, lentrenado, lsexo) {
+		obj = this;
+
+		obj.nombre = lnombre;
+		obj.raza = lraza;
+		obj.entrenado = lentrenado;
+		obj.sexo = lsexo;
+
+		obj.saltar = function(){
+			alert("Estoy saltando");
+		}
+
+		obj.ladrar = function(){
+			alert("Estoy ladrando");
+		}
+
+		obj.comer = function(){
+			alert("Estoy comiendo");
+		}
+
+		obj.mostrarNombre = function(){
+			//document.write(obj.nombre);
+			//Muestra el nombre del perro en una etiqueta nueva H1
+			var etiqueta = document.createElement("h1");
+			etiqueta.innerHTML = obj.nombre; 
+
+			document.body.appendChild(etiqueta);
+
+			//Muestra la raza del perro en una etiqueta pre-existente
+			var etiquetaRaza = document.getElementById("razaPerro");
+			etiquetaRaza.innerHTML = obj.raza;
+		}
+	}
+
+	var miPerro = new Perro("Dandy", "Siberiano", true, true);
+
+	miPerro.mostrarNombre();
+
+
+</script>
+
+
+
+</body>
+</html>
