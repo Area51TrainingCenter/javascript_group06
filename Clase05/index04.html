@@ -38,6 +38,23 @@
 			<br>
 			<cite>- {{comentario.autor}}</cite>
 		</div>
+		<hr>
+		<form name="frm" ng-controller="formularioController as formulario" ng-submit="frm.$valid && formulario.agregarComentario(animal)" novalidate>
+			<input type="text" placeholder="Ingresar autor" ng-model="formulario.comentario.autor" required /><br>
+			<textarea placeholder="Deje su comentario" ng-model="formulario.comentario.texto" required></textarea><br>
+			Califique: 
+			<select ng-model="formulario.comentario.estrellas" required>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select><br>
+
+			Validación: {{frm.$valid}}
+
+			<br>
+			<input type="submit" value="Enviar comentartio" />
+		</form>
 
 
 		<hr>

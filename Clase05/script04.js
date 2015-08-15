@@ -41,7 +41,19 @@
 		this.agrandarFoto = function(indice){
 			this.fotoActual=indice;
 		};
-	})
+	});
+
+	app.controller("formularioController", function(){
+		this.comentario = {};
+
+		this.agregarComentario = function(animal){
+			animal.comentarios.push(this.comentario);
+
+			this.comentario = {};
+		}
+
+
+	});
 
 
 })();
