@@ -1,0 +1,23 @@
+<html ng-app="miApp2">
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+
+	<script src="script03.js"></script>
+
+
+</head>
+<body ng-controller="usuarioController as usuarioctrl">
+	{{usuarioctrl.datosUsuario.nombre}}
+	<br>
+	<h1>{{usuarioctrl.datosUsuario.hijos[0]}}</h1>
+	<h1>{{usuarioctrl.datosUsuario.hijos[1]}}</h1>
+
+	<h1 ng-repeat="elemento in usuarioctrl.datosUsuario.hijos">
+		{{elemento}}
+	</h1>
+
+
+</body>
+</html>

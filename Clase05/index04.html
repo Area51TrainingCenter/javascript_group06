@@ -1,0 +1,49 @@
+<html ng-app="miApp">
+<head>
+	<title></title>
+	<meta charset="utf8">
+	<style type="text/css">
+		.foto {
+			float:left;
+		}
+
+		.clearfix {
+			clear:both;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+
+	<script src="script04.js"></script>
+
+
+</head>
+<body ng-controller="inventarioController as inventarioctrl">
+
+	<div ng-repeat="animal in inventarioctrl.animales" ng-controller="galeriaController as galeria">
+		
+		<h1>{{animal.tipo}}</h1>
+		<img ng-src="{{animal.fotos[galeria.fotoActual].grande}}" />
+		<br>
+		<!--Galería de fotos -->
+		<div class="foto" ng-repeat="foto in animal.fotos">
+			<img ng-src="{{foto.chica}}" ng-click="galeria.agrandarFoto($index)" />	
+		</div>
+		<div class="clearfix"></div>
+		
+		<!-- Comentarios -->
+		<hr>
+		<div ng-repeat="comentario in animal.comentarios">	
+			<p>{{comentario.texto}}</p>
+			<small>Estrellas: {{comentario.estrellas}}</small>
+			<br>
+			<cite>- {{comentario.autor}}</cite>
+		</div>
+
+
+		<hr>
+
+	</div>
+
+
+</body>
+</html>
