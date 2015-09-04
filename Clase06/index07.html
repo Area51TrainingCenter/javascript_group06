@@ -1,0 +1,44 @@
+<html ng-app="miApp">
+<head>
+	<title></title>
+	<meta charset="utf8">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">	
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+	<script src="script07.js"></script>		
+</head>
+<body ng-controller="miControlador as ctrl">
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Empleado</th>
+				<th>Cargo</th>
+				<th>Fecha de ingreso</th>
+				<th>Sueldo (S/.)</th>
+				<th>Sueldo (S/.)</th>
+				<th>Idioma</th>
+				<th>Nacionalidad</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="empleado in ctrl.empleados">
+				<td>{{empleado.nombreCompleto | uppercase}}</td>
+				<td>{{empleado.cargo | lowercase}}</td>
+				<td>{{empleado.fecha | date:"fullDate"}}</td>
+				<td>{{empleado.sueldo | number:1}}</td>
+				<td>{{empleado.sueldo | currency:"S/.":1}}</td>
+				<td>{{empleado.idioma}}</td>
+				<td>{{empleado.idioma | limitTo:2}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>

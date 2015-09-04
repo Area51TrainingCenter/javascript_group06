@@ -1,0 +1,6 @@
+			<fieldset>
+				<legend>{{galeria.titulo}}</legend>
+				<div ng-repeat="foto in galeria.fotos">
+					<img ng-src="{{foto.archivo}}" ng-click="gal.mostrarTituloFoto(foto)" />
+				</div>
+			</fieldset>
