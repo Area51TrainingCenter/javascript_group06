@@ -1,0 +1,34 @@
+<html ng-app="miApp">
+<head>
+	<title></title>
+	<meta charset="utf8">
+</head>
+<body ng-controller="miControlador as ctrl">
+
+	<fieldset>
+		<legend>Insertar</legend>
+		<input type="text" ng-model="ctrl.datoAInsertar">
+		<input type="button" ng-click="ctrl.insertarRegistro()" value="Insertar">
+	</fieldset>
+
+
+	<input type="text" ng-model="busqueda">
+
+	<div ng-repeat="item in ctrl.lista | filter:busqueda | orderBy:'-nombreCurso'">
+		<h1>{{item.nombreCurso}}</h1>
+		<h2>{{item.idCurso}}</h2>
+		<input type="text" ng-model="item.nombreCurso">
+		<input type="button" ng-click="ctrl.actualizarCurso(item)" value="Actualizar">
+		<br/>
+		<a href ng-click="ctrl.borrarRegistro(item)">Borrar</a>
+		| <a href ng-click="ctrl.mostrarFechaActualizacion(item)">Fecha de actualización</a>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+	<script src="script04.js"></script>
+	<script src="serviciosCursos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CLIENTE</title>
+</head>
+<body>
+	<h1>CLIENTE</h1>
+	<img id="streaming" />
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		"use strict";
+		var io = io();
+		io.on("play video", function (img){
+			document.getElementById("streaming").src = img;
+		});
+	</script>
+</body>
+</html>
